@@ -2,7 +2,8 @@ import ListGroup from './components/ListGroup';
 import {Fragment, useState} from 'react';
 
 function App() {
-    return <ListGroup />;
+    const items = ['New York', 'SF', 'Tokyo', 'Paris'];
+    return <ListGroup items={items} heading='Cities' />;
 }
 
 export default App;
