@@ -2,9 +2,7 @@ import {useState} from 'react';
 
 function ListGroup() {
     const items = ['New York', 'SF', 'Tokyo', 'Paris'];
-
     const [selectedIndex, setSelectedIndex] = useState(-1);
-    //Hook
 
     return (
         //<></> makes this a fragment
