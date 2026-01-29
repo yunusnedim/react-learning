@@ -1,14 +1,20 @@
 import ListGroup from './components/ListGroup';
+import {Fragment} from 'react';
 
 function App() {
+    const items = ['New York', 'SF', 'Tokyo', 'Paris'];
+    items.map((item) => <li>{item}</li>);
+
     return (
-        <ul className='list-group'>
-            <li className='list-group-item active'>Cras justo odio</li>
-            <li className='list-group-item'>Dapibus ac facilisis in</li>
-            <li className='list-group-item'>Morbi leo risus</li>
-            <li className='list-group-item'>Porta ac consectetur ac</li>
-            <li className='list-group-item'>Vestibulum at eros</li>
-        </ul>
+        //<></> makes this a fragment
+        <>
+            <h1>List</h1>
+            <ul className='list-group'>
+                {items.map((item) => (
+                    <li>{item}</li>
+                ))}
+            </ul>
+        </>
     );
 }
 
