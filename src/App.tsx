@@ -11,11 +11,13 @@ function App() {
             {/* {items.length === 0 ? <p>No Item Found</p> : null} same as below */}
             {items.length === 0 && <p>No Item Found</p>}
             <ul className='list-group'>
-                {items.map((item) => (
+                {items.map((item, index) => (
                     <li
                         className='list-group-item'
                         key={item}
-                        onClick={() => console.log('clicked ' + item)}
+                        onClick={() =>
+                            console.log('clicked ' + item + ', ' + index)
+                        }
                     >
                         {item}
                     </li>
