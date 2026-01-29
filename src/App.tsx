@@ -1,8 +1,14 @@
 import ListGroup from './components/ListGroup';
 import {Fragment} from 'react';
+import {MouseEvent} from 'react';
 
 function App() {
     const items = ['New York', 'SF', 'Tokyo', 'Paris'];
+
+    // event handler
+    const handleClick = (event: MouseEvent) => {
+        console.log(event);
+    };
 
     return (
         //<></> makes this a fragment
@@ -15,9 +21,7 @@ function App() {
                     <li
                         className='list-group-item'
                         key={item}
-                        onClick={() =>
-                            console.log('clicked ' + item + ', ' + index)
-                        }
+                        onClick={handleClick}
                     >
                         {item}
                     </li>
