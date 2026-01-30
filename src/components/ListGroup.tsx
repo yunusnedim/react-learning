@@ -5,10 +5,13 @@ import {useState} from 'react';
 interface ListGroupProps {
     items: string[];
     heading: string;
+    // action: () =>;
+    onSelectItem: (item:string) => void;
 }
 
-function ListGroup({items, heading}: ListGroupProps) {
-    const [selectedIndex, setSelectedIndex] = useState(-1);
+function ListGroup({items, heading, onSelectItem}: ListGroupProps) {
+    const [selectedIndex, setSelectedIndex] = useState(-1); //hook
+
 
     return (
         //<></> makes this a fragment
@@ -27,6 +30,7 @@ function ListGroup({items, heading}: ListGroupProps) {
                         key={item}
                         onClick={() => {
                             setSelectedIndex(index);
+                            onSelectItem(item);
                         }}
                     >
                         {item}
