@@ -11,6 +11,7 @@ function App() {
     <Alert>
       Hello World 3 <h1> World 4</h1>
       </Alert>
+      <Button text={'My First Button'} onClickButton={buttonAction} color={'danger'}/>
       <Button text={'My First Button'} onClickButton={buttonAction}/>
 
     </div>)
