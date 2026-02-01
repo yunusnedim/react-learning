@@ -9,8 +9,6 @@ const Button = ({text, onClickButton, color = 'primary'}:Props) => {
   return (
     <button type="button" className={'btn btn-'+color} onClick={onClickButton}>{text}
 
-
-
     </button>
   )
 }
